@@ -1,6 +1,6 @@
 # Pgp Encryption encoder plugin for Embulk
 
-TODO: Write short description here and build.gradle file.
+Embulk encoder plugin to encrypt with PGP key.
 
 ## Overview
 
@@ -8,19 +8,18 @@ TODO: Write short description here and build.gradle file.
 
 ## Configuration
 
-- **option1**: description (integer, required)
-- **option2**: description (string, default: `"myvalue"`)
-- **option3**: description (string, default: `null`)
+- **public_key_ring**: KeyRing file path (string, required)
+- **key_name**: User ID sub-string of the public key like email (string, default: `""`). If omitted, the first pubKey is used.
 
 ## Example
 
 ```yaml
 out:
-  type: any output input plugin type
+  type: file output plugin type
   encoders:
     - type: pgp_encryption
-      option1: example1
-      option2: example2
+      public_key_ring: ./sample/pubring.gpg
+      key_name: mokemokechicken@example.com
 ```
 
 
