@@ -52,17 +52,16 @@ Gem::Specification.new do |spec|
   spec.name          = "${project.name}"
   spec.version       = "${project.version}"
   spec.authors       = ["Ken Morishita"]
-  spec.summary       = %[Pgp Encryption encoder plugin for Embulk]
-  spec.description   = %[Encodes files using Pgp Encryption for other file output plugins.]
+  spec.summary       = %[PGP Encryption encoder plugin for Embulk]
+  spec.description   = %[Encodes files using PGP Encryption for other file output plugins.]
   spec.email         = ["k_morishita@yumemi.co.jp"]
   spec.licenses      = ["MIT"]
-  # TODO set this: spec.homepage      = "https://github.com/k_morishita/embulk-encoder-pgp_encryption"
+  spec.homepage      = "https://github.com/k_morishita/embulk-encoder-pgp_encryption"
 
   spec.files         = `git ls-files`.split("\n") + Dir["classpath/*.jar"]
   spec.test_files    = spec.files.grep(%r"^(test|spec)/")
   spec.require_paths = ["lib"]
 
-  #spec.add_dependency 'YOUR_GEM_DEPENDENCY', ['~> YOUR_GEM_DEPENDENCY_VERSION']
   spec.add_development_dependency 'bundler', ['~> 1.0']
   spec.add_development_dependency 'rake', ['>= 10.0']
 end
